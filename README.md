@@ -117,8 +117,8 @@ Opcodes.
 
 2) ALU REG, IMM (7 bit Immediate operations)
 ```
-	func(3 bit) = register bank (0 or 1)
-	func(0-2 bits):
+	func(2 bit) = register bank (0 or 1)
+	func(0-1 bits):
 		0) ADD/SUB: Rd = Rd + (signed(IMM))
 		1) SHL/SHR: Rd = << or >> signed(IMM & 31)
 		2) LDI Rd = [PC + signed(IMM)]; 32 bit constant loading, IMM in 32 bit dword (-512 ... +512 bytes)
