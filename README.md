@@ -112,7 +112,7 @@ Opcodes.
 
 1) LD REG, IMM (8 bit Immediate operations)
 ```
-	LD.Byte Rd = IMM; func: register byte number = 0-3 
+	LD.Byte Rd = IMM; func(1): bank, func(0): register byte number = 0 | 1 (To load high bytes use shift) 
 ```
 
 2) ALU REG, IMM (7 bit Immediate operations)
