@@ -121,8 +121,8 @@ Opcodes.
 	func(0-1 bits):
 		0) ADD/SUB: Rd = Rd + (signed(IMM))
 		1) SHL/SHR: Rd = << or >> signed(IMM & 31)
-		2) LDI Rd = [PC + signed(IMM)]; 32 bit constant loading, IMM in 32 bit dword (-512 ... +512 bytes)
-		3) DJNZ Rd, PC + signed(IMM); Rd-- if not zero, jump taken
+		2) LDI Rd = [PC - IMM]; 32 bit constant loading, IMM in 32 bit dword (-512 ... 0 bytes)
+		3) DJNZ Rd, PC + signed(IMM); Rd-- if not zero, jump taken. IMM in instructions (-64 ... +63 instructions)
 ```
 
 3) LD\ST REG <-> MEM (2 Register operations)
@@ -204,5 +204,5 @@ Opcodes.
 
 8) CALL RELATIVE PC + IMM(signed) (13 bit Immediate operations); LR = PC + 2; Return address + 1 (next instruction) 
 ```
-		IMM = -8K ... +8K bytes; in instructions, not bytes (Number*2)
+		IMM = -4K ... +4K instructions; IMM in instructions
 ```
