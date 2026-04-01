@@ -21,7 +21,7 @@ Insructions: all 16 bit. Fetching from memory 2 instructions at once as data bus
 	SP - stack pointer, available to load\restore using common registers
 ```
 
-RiscA could execute some operation simultaneously (Dual-Issue (ALU + MEM),(ALU + ALU)), if target registers in different reg bank.
+RiscA could execute some operations simultaneously (Dual-Issue (ALU + MEM),(ALU + ALU)), if target registers in different reg bank.
 
 Example:
 ```
