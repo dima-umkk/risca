@@ -7,7 +7,7 @@ Byte order: Little-Endian.
 
 ALU: add, sub, shl, shr, and, or, xor
 
-Insructions: all 16 bit. Fetching from memory 2 instruction as data bus is 32 bit.
+Insructions: all 16 bit. Fetching from memory 2 instructions at once as data bus is 32 bit.
 
 16 General Purpose Registers (32 bit):
 ```
