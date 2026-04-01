@@ -191,15 +191,15 @@ Opcodes.
 
 7) JMP RELATIVE (3 Register operations)
 ```
-	Rx=0: JMP PC+signed(IMM); IMM = Rs(3)+Ex(2)+func(2)+Rd(3) = 10 bit in instructions (-512 ... +511 instructions)
-		JMP cond Rs, Rd PC+signed(IMM); IMM = Ex(2)+func(2) = 4 bit in instructinos (-8 ... +7 instructions)
-		Rx=1: Rs == Rd
-		Rx=2: Rs != Rd
-		Rx=3: Rs >  Rd
-		Rx=4: Rs >= Rd
-		Rx=5: Rs <  Rd
-		Rx=6: Rs <= Rd
-		Rx=7:
+	Rd=0: JMP PC+signed(IMM); IMM = Rs(3)+Ex(2)+func(2)+Rx(3) = 10 bit in instructions (-512 ... +511 instructions)
+		JMP cond(Rd) Rs, Rx PC+signed(IMM); IMM = Ex(2)+func(2) = 4 bit in instructinos (-8 ... +7 instructions)
+		Rd=1: Rs == Rx
+		Rd=2: Rs != Rx
+		Rd=3: Rs >  Rx
+		Rd=4: Rs >= Rx
+		Rd=5: Rs <  Rx
+		Rd=6: Rs <= Rx
+		Rd=7: Future extension
 ```
 
 8) CALL RELATIVE PC + IMM(signed) (13 bit Immediate operations); LR = PC + 2; Return address + 1 (next instruction) 
